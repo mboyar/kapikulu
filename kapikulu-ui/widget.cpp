@@ -9,6 +9,8 @@ Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
+    setWindowFlags(Qt::FramelessWindowHint);
+
     ui->setupUi(this);
     timeouter = new QTimer(this);
     timeouter_2 = new QTimer(this);
@@ -51,9 +53,14 @@ void Widget::piccer(){
             return;
         }
         //! [2] //! [3]
+//        QPixmap pixmap(*ui->labelPic->pixmap());
+//        QMatrix rm;
+//        rm.rotate(90);
+//        pixmap = pixmap.transformed(rm);
+
         ui->labelPic->raise();
         ui->labelPic->setAlignment(Qt::AlignCenter);
-        ui->labelPic->setPixmap(QPixmap::fromImage(image.scaled(240,320)));
+        ui->labelPic->setPixmap(QPixmap::fromImage(image.scaled(320, 240)));
         //! [3] //! [4]
         ui->labelPic->adjustSize();
         /////
