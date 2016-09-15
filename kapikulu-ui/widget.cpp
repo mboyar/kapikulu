@@ -60,7 +60,7 @@ void Widget::piccer(){
 
         ui->labelPic->raise();
         ui->labelPic->setAlignment(Qt::AlignCenter);
-        ui->labelPic->setPixmap(QPixmap::fromImage(image.scaled(320, 240)));
+        ui->labelPic->setPixmap(QPixmap::fromImage(image.scaled(640, 480)));
         //! [3] //! [4]
         ui->labelPic->adjustSize();
         /////
