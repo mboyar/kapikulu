@@ -10,6 +10,7 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     setWindowFlags(Qt::FramelessWindowHint);
+    setCursor(Qt::BlankCursor);
 
     ui->setupUi(this);
     timeouter = new QTimer(this);
