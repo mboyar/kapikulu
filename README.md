@@ -1,5 +1,3 @@
 # kapikulu
 
-apt-get install python-opencv
-pip install cv2
-pip install tweepy
+for details please visit https://hackaday.io/project/9315-kapikulu
